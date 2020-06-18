@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Formulario from "./components/Formulario";
 import Cita from "./components/Cita";
+import PropTypes from "prop-types";
 
 function App() {
   // Citas en local storage
@@ -52,5 +53,9 @@ function App() {
     </Fragment>
   );
 }
+
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired,
+};
 
 export default App;
